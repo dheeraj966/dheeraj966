@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unimaginable Animations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(49,150,51,1) 0%, rgba(14,0,171,1) 53%, rgba(49,150,51,1) 100%);
+    cursor: none;
+}
+
+.animation-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box, .circle, .triangle, .blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 5s ease-in-out infinite;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #8e44ad;
+    animation-delay: 0s;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: #3498db;
+    border-radius: 50%;
+    animation-delay: 2s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #e74c3c;
+    animation-delay: 4s;
+}
+
+.blob {
+    width: 150px;
+    height: 150px;
+    background: #165701;
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-delay: 6s;
+}
+
+@keyframes animate {
+    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(calc(50vw - 50px), calc(50vh - 50px)) rotate(360deg); }
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    animation: cursor-animation 0.1s infinite alternate;
+}
+
+@keyframes cursor-animation {
+    from { transform: scale(1); }
+    to { transform: scale(1.5); }
+}
+ 
+</style>
+<body>
+    <div class="animation-area">
+        <div class="box"></div>
+        <div class="circle"></div>
+        <div class="triangle"></div>
+        <div class="blob"></div>
+    </div>
+    <div class="cursor" id="cursor"></div>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+    const cursor = document.getElementById('cursor');
+    cursor.style.left = e.pageX + 'px';
+    cursor.style.top = e.pageY + 'px';
+});
+
+// Change cursor color on hover over animated elements
+const elements = document.querySelectorAll('.box, .circle, .triangle, .blob');
+elements.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        cursor.style.borderColor = getComputedStyle(element).backgroundColor;
+    });
+    element.addEventListener('mouseleave', () => {
+        cursor.style.borderColor = '#fff';
+    });
+});
+
+// Create trailing effect
+document.addEventListener('mousemove', function(e) {
+    const trail = document.createElement('div');
+    trail.className = 'trail';
+    trail.style.left = e.pageX + 'px';
+    trail.style.top = e.pageY + 'px';
+    document.body.appendChild(trail);
+    setTimeout(() => {
+        trail.remove();
+    }, 500);
+});
+
+// Background color change
+const colors = ['#2c3e50', '#8e44ad', '#3498db', '#e74c3c', '#1abc9c'];
+setInterval(() => {
+    document.body.style.background = `linear-gradient(135deg, ${colors[Math.floor(Math.random() * colors.length)]} 0%, ${colors[Math.floor(Math.random() * colors.length)]} 99%, ${colors[Math.floor(Math.random() * colors.length)]} 100%)`;
+}, 5000);
+
+// Keyboard controls
+document.addEventListener('keydown', function(e) {
+    switch(e.key) {
+        case '1':
+            changeBackgroundColor('#1abc9c');
+            break;
+        case '2':
+            changeBackgroundColor('#3498db');
+            break;
+        case '3':
+            changeBackgroundColor('#54036e');
+            break;
+        case '4':
+            changeBackgroundColor('#129190');
+            break;
+        case 'c':
+            toggleCursorSize();
+            break;
+    }
+});
+
+function changeBackgroundColor(color) {
+    document.body.style.background = color;
+}
+
+function toggleCursorSize() {
+    if (cursor.style.transform === 'scale(1.5)') {
+        cursor.style.transform = 'scale(1)';
+    } else {
+        cursor.style.transform = 'scale(1.5)';
+    }
+}
+
+// Additional cursor features
+cursor.classList.add('cursor-animation');
+
+// CSS for the trailing effect
+const style = document.createElement('style');
+style.innerHTML = `
+    .trail {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        pointer-events: none;
+        opacity: 0.5;
+        transition: opacity 0.5s ease;
+    }
+
+    .cursor-animation {
+        animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+`;
+document.head.appendChild(style);
+
+    </script>
+</body>
+</html>
