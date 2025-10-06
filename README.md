@@ -23,9 +23,11 @@ Welcome to my GitHub profile! I'm passionate about developing AI-first APIs, exp
 
 ## 💾 Minimal SQL Project
 
-- **Large Dataset Handling for AI Models:**  
-  *Learning and implementing advanced data management and training methodologies using SQL and other DB languages.*
+- **Large Dataset Handling for AI Models:**
 
+  *SQL and NoSQl based development in my repo present where i dynamically presents the updated triggered data under created data.csv file to sql operations*
+  *Learning and implementing advanced data management and training methodologies using SQL and other DB languages.*
+  
 ---
 
 ## 🌐 Other Projects & Domains
