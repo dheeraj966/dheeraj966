@@ -49,7 +49,7 @@ Welcome to my GitHub profile! I'm passionate about developing AI-first APIs, exp
 
 - **Data Handling:**  
   - Large-scale dataset management  
-  - Efficient training pipelines using SQL/DB technologies
+  - Efficient training on pipelines using SQL/DB technologies
 
 ---
 
@@ -59,7 +59,7 @@ I'm committed to developing critical software technologies:
 - **Training, launching, and maintaining cloud-hosted software**
 - **Support projects for cloud platform training**
 - **Advanced operations across network domains and operating systems**
-- **Exploring new configurations, protocols, and architectures**
+- **Exploring new configurations, protocols, and architectures to develop models**
 
 ---
 
