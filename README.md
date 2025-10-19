@@ -1,5 +1,4 @@
 # 👋 Hi, I'm Dheeraj
-
 Welcome to my GitHub profile! I'm passionate about developing AI-first APIs, exploring advanced agent architectures, and building innovative solutions in cloud and network domains.
 
 ---
@@ -16,46 +15,23 @@ Welcome to my GitHub profile! I'm passionate about developing AI-first APIs, exp
   *Focused on scalable, cloud-hosted environments for training, launching, and maintaining AI models.*
 
 > **Project Metrics:**  
-> - **Commits:** [See repositories for details]  
-> - **Type:** AI, API-first, Infrastructure, Cloud-native, Experimental
+> - **Commits:** [See repositories for details]
 
 ---
 
-## 💾 Minimal SQL Project
+## 🛠️ Technical Expertise
 
-- **Large Dataset Handling for AI Models:**
-
-  *SQL and NoSQl based development in my repo present where i dynamically presents the updated triggered data under created data.csv file to sql operations*
-  *Learning and implementing advanced data management and training methodologies using SQL and other DB languages.*
-  
----
-
-## 🌐 Other Projects & Domains
-
-- **Cloud-hosted Software & Support Projects:**  
-  *Building and maintaining training platforms for cloud, network, and multi-OS environments.*
-
-- **Network Domains & Protocols:**  
-  *Configuring, operating, and supporting diverse network architectures and protocols.*
-
----
-
-## 🛠️ Current Focus
-
-- **AI Agent Architecture:**  
-  - Long-context conversational memory systems  
-  - Training methodologies and infrastructure  
-  - Consciousness  modeling
-
-- **Data Handling:**  
-  - Large-scale dataset management  
-  - Efficient training on pipelines using SQL/DB technologies
+- **Cloud & Infrastructure:** Building scalable AI training environments
+- **Agent Architecture:** Long-context conversation systems
+- Large-scale dataset management  
+- Efficient training on pipelines using SQL/DB technologies
 
 ---
 
 ## 🎯 Future Plans
 
 I'm committed to developing critical software technologies:
+
 - **Training, launching, and maintaining cloud-hosted software**
 - **Support projects for cloud platform training**
 - **Advanced operations across network domains and operating systems**
@@ -73,4 +49,4 @@ Currently expanding my expertise in:
 ---
 
 > **Let's connect!**  
-> [GitHub](https://github.com/dheeraj966) | [LinkedIn](#) | [Email](#)
+> [GitHub](https://github.com/dheeraj966) | [LinkedIn](#) | [Email 1: maxwell.maxwell966@gmail.com](mailto:maxwell.maxwell966@gmail.com) | [Email 2: ugs22186_ece.dheeraj@cbit.org.in](mailto:ugs22186_ece.dheeraj@cbit.org.in)
